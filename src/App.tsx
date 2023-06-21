@@ -16,9 +16,9 @@ function App() {
     setTextareaValue(value);
   };
 
-  const updateLocalStorage = () => {
+  const upsertIntoLocalstorage = () => {
     localStorage.setItem(LOCAL_STORAGE_KEY, textareaValue);
-    setMessage('Upsert to localstorage!');
+    setMessage('upsertIntoLocalstorage');
   };
 
   useEffect(() => {
@@ -32,15 +32,15 @@ function App() {
 
   return (
     <div>
-      <h5>Purpose and repo:</h5>
-      This repo to play with alloy and react and adobe sdk
-      <br />
-      <a href="https://github.com/mulefish/adobe_alloy_starter_toy">
-        https://github.com/mulefish/adobe_alloy_starter_toy
-      </a>
-      <h5>Notes:</h5>
+      <h5>
+        This repo is to play with alloy and react and adobe sdk
+        <br />
+        <a href="https://github.com/mulefish/adobe_alloy_starter_toy">
+          github repo
+        </a>
+      </h5>
       <div style={getCssForRow()}>
-        <button onClick={() => updateLocalStorage()}>
+        <button onClick={() => upsertIntoLocalstorage()}>
           update localstorage
         </button>
         &nbsp;
@@ -54,7 +54,9 @@ function App() {
         onChange={textareaChange}
       />
       <hr></hr>
-      <button onClick={() => updateLocalStorage()}>update localstorage</button>
+      <button onClick={() => upsertIntoLocalstorage()}>
+        update localstorage
+      </button>
     </div>
   );
 }
