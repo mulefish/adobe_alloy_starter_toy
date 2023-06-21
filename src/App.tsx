@@ -32,12 +32,20 @@ function App() {
 
   return (
     <div>
+      <h5>Purpose and repo:</h5>
+      This repo to play with alloy and react and adobe sdk
+      <br />
+      <a href="https://github.com/mulefish/adobe_alloy_starter_toy">
+        https://github.com/mulefish/adobe_alloy_starter_toy
+      </a>
+      <h5>Notes:</h5>
       <div style={getCssForRow()}>
         <button onClick={() => updateLocalStorage()}>
           update localstorage
         </button>
         &nbsp;
         <Feedback message={message} setMessage={setMessage} />
+        &nbsp;
       </div>
       <hr></hr>
       <textarea
